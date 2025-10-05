@@ -2,6 +2,11 @@ import React from "react";
 import { useLoaderData, useParams } from "react-router";
 import { addToDB } from "../../utility/addToDB";
 
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
+
 const BookDetails = () => {
   const { id } = useParams();
   const bookId = parseInt(id);
@@ -27,6 +32,12 @@ const BookDetails = () => {
 
   const handleReadBook = () => {
     addToDB(bookId);
+
+    Swal.fire({
+      title: "Good job!",
+      text: "Book added to your reading list",
+      icon: "success",
+    });
   };
 
   return (
