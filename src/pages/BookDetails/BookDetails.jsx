@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import { addToDB } from "../../utility/addToDB";
 
 const BookDetails = () => {
   const { id } = useParams();
@@ -23,6 +24,10 @@ const BookDetails = () => {
     review,
     tags,
   } = singleBook;
+
+  const handleReadBook = () => {
+    addToDB(bookId);
+  };
 
   return (
     <section className="bg-white text-white min-h-screen py-20 px-6">
@@ -83,7 +88,10 @@ const BookDetails = () => {
 
           {/* Buttons */}
           <div className="flex gap-4 pt-6">
-            <button className="bg-white text-[#131313] px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition border">
+            <button
+              onClick={handleReadBook}
+              className="bg-white text-[#131313] px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition border"
+            >
               Read
             </button>
             <button className="bg-[#38BDF8] px-8 py-3 rounded-lg font-semibold hover:bg-[#0ea5e9] transition">

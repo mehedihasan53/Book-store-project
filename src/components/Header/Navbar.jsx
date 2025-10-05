@@ -29,7 +29,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/listed"
+                to="/readListed"
                 className={({ isActive }) =>
                   isActive
                     ? "text-green-600 border border-green-600 px-3 py-1 rounded"
@@ -97,7 +97,7 @@ const Navbar = () => {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/listed">Listed Books</NavLink>
+                <NavLink to="/readListed">Listed Books</NavLink>
               </li>
               <li>
                 <NavLink to="/pages">Pages to Read</NavLink>
