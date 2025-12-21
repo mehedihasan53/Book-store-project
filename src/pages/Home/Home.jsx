@@ -9,6 +9,7 @@ const Home = () => {
   //   console.log(data);
   return (
     <div>
+      {/* banner section */}
       <Banner></Banner>
       <Books data={data}></Books>
     </div>
