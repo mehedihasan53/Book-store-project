@@ -9,7 +9,7 @@ const Home = () => {
   //   console.log(data);
   return (
     <div>
-      {/* banner section part */}
+      {/* banner section  */}
       <Banner></Banner>
       {/* books data */}
       <Books data={data}></Books>
